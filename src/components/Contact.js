@@ -12,7 +12,22 @@ function Contact() {
         with me. Hit me up if you have some question, want a collaboration or just play a game of chess. I'll try to get
         back to you as soon as I can.</p>
 
+        <Links>
+            <a href="#"><LinkWrap>
+                <IconContext.Provider value={{color: 'white', size: 20}}>
+                    <AiFillLinkedin/>
+                </IconContext.Provider>
+                Linkedin
+            </LinkWrap></a>
+
+            <a href="#"><LinkWrap>
+                <IconContext.Provider value={{color: 'white', size: 20}}>
+                    <AiFillGithub/>
+                </IconContext.Provider>
+                Github
+            </LinkWrap></a>
         
+        </Links>
 
         </Container>
     )
@@ -45,11 +60,17 @@ const Links = styled.div`
     justify-content : space-between;
     align-items : center;
     margin : 20px;
+    a{
+        text-decoration : none;
+        margin : 10px;
+
+    }
 
 `
 
 const LinkWrap = styled.div`
 
     display : flex;
+    color : white;
 
 `

@@ -34,7 +34,14 @@ function Projects() {
 
                         <h4>Tech : React, Styled Components</h4>
 
-                            <p>This is a clone of Tesla Official Website. This Project helped me to clearly understand how to break a project into components, use of props and react hooks.</p></Info>
+                            <p>This is a clone of Tesla Official Website. This Project helped me to clearly understand how to break a project into components, use of props and react hooks.</p>
+                            
+                            <ButtonGroup>
+                                <a href="https://github.com/frq-frk/tesla-clone" target="_blank"><LeftButton>Source Code</LeftButton></a>    
+                                <a href="https://tesla-clone-ruddy-nine.vercel.app/" target="_blank"><RightButton>View Demo</RightButton></a>
+                            </ButtonGroup>
+                            
+                            </Info>
                         <img src="files/tesla-clone.jpg"></img>
                     </Card>
                 </div>
@@ -43,7 +50,14 @@ function Projects() {
                         <Info>
                         <h3>Chat Room</h3>
                         <h4>Tech : NodeJs, ExpressJs, Socket.io</h4>
-                            <p>This is a web app, which I completely focused on backend development using NodeJs and ExpressJs. This project helped me to understand how to buld a backend from scratch and also usage of sockets.io for asynchronous communication between server and the client.</p></Info>
+                            <p>This is a web app, which I completely focused on backend development using NodeJs and ExpressJs. This project helped me to understand how to buld a backend from scratch and also usage of sockets.io for asynchronous communication between server and the client.</p>
+                            
+                            <ButtonGroup>
+                                <a href="https://github.com/frq-frk/node_space/tree/main/chatRoom" target="_blank"><LeftButton>Source Code</LeftButton></a>    
+                                <a href="https://rocky-forest-43257.herokuapp.com/" target="_blank"><RightButton>View Demo</RightButton></a>
+                            </ButtonGroup>
+
+                            </Info>
                         <img src="files/chatRoom.jpg"></img>
                     </Card>
                 </div>
@@ -54,6 +68,12 @@ function Projects() {
                         <h4>Tech : HTML,CSS,JQUERY,AJAX</h4>
                             <p>This is a site built using basic HTML, CSS. This project helped me to practice how all these basic tech can be combined to build a working site.</p>
                             <p>OpenWeatherApi has been used.</p>
+
+                            <ButtonGroup>
+                                <a href="https://github.com/frq-frk/fun/tree/main/jsPractice/weatherSite" target="_blank"><LeftButton>Source Code</LeftButton></a>    
+                                <a href="https://frq-frk.github.io/fun/jsPractice/weatherSite/" target="_blank"><RightButton>View Demo</RightButton></a>
+                            </ButtonGroup>
+
                             </Info>
                         <img src="files/weatherSite.jpg"></img>
                     </Card>
@@ -119,5 +139,49 @@ const Info = styled.div`
     display = flex;
     flex-direction : column;
     margin : 0px 20px;
+
+`
+
+const ButtonGroup = styled.div`
+
+    display : flex;
+    margin-bottom : 20px;
+    @media (max-width : 768px){
+        flex-direction : column;
+    }
+
+    a{
+        text-decoration : none;
+    }
+`
+
+const LeftButton = styled.div`
+
+    height : 30px;
+    width : 100px;
+    border : 1px solid white;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    border-radius : 100px;
+    opacity : 0.85;
+    text-transform : uppercase;
+    font-size : 12px;
+    font-weight : bolder;
+    color : white;
+    cursor : pointer;
+    margin : 3px;
+    transition : all 0.2s ease-in-out;
+
+    &:hover{
+        transform : translateY(-5px);
+    }
+`
+
+const RightButton = styled(LeftButton)`
+
+    background : white;
+    opacity : 0.55;
+    color : black;
 
 `
